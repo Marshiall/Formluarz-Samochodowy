@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<title>Formulasz samochodowy</title>
+	<meta name="description" content="Stwórz wymarzony model swojego samochodu!">
+	<meta name="keywords" content="samochód, katalog, salon, nowe auto">
+	<meta name="author" content="Marcel Bernacikowski">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+	
+	<link rel="stylesheet" href="main.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+
+	<header>
+	
+		<h1>Wybierz konfigurację samochodu</h1>
+
+	</header>
+	
+	<main>
+	
+		<article>
+		
+			<form action="order.php" method="post">
+			
+				<div class="row">
+				
+					<label for="marka"> Jaka marka samochodu? </label>
+					<select id="marka" name="marka">
+					
+						<option value="b" selected>Wyberz markę</option>
+						<option value="w">Ferrari</option>
+						<option value="b">Lamborghini</option>
+						<option value="e">Tesla</option>
+						<option value="h">Audi</option>
+					
+					</select>
+				
+				</div>
+				
+				<div class="row">
+				
+					<fieldset>
+					
+						<legend> Jaki Rodzaj nadwozia </legend>
+				
+						<div><label><input type="radio" value="1" name="nadwozie"> Hatchback </label></div>
+						<div><label><input type="radio" value="2" name="nadwozie"> Kabriolet </label></div>
+						<div><label><input type="radio" value="3" name="nadwozie"> Kombi </label></div>
+						<div><label><input type="radio" value="3" name="nadwozie"> Sedan </label></div>
+				
+					</fieldset>
+				
+				</div>
+				
+				<div class="row">
+				
+					<label for="silnik"> Jaki Rodzaj silnika? </label>
+					<select id="silnik" name="silnik">
+					
+						<option value="b" selected>wybierz rodzaj silnika</option>
+						<option value="w">wysokoprężny</option>
+						<option value="b">benzynowy</option>
+						<option value="e">elektryczny</option>
+						<option value="h">hybrydowy</option>
+					
+					</select>
+				
+				</div>
+
+				<div class="row">
+				
+					<label for="wyposażenie"> Jaki wersja wyposażenia? </label>
+					<select id="wyposażenie" name="wyposażenie">
+					
+						<option value="b" selected>wybierz wersja wyposażenia</option>
+						<option value="w">standard</option>
+						<option value="b">basic</option>
+						<option value="e">comfort</option>
+						<option value="h">exclusive</option>
+					
+					</select>
+				
+				</div>
+				
+				<div class="row">
+				
+					<fieldset>
+					
+						<legend> Dodatkowe wyposażenie samochodu </legend>
+						
+						<div class="col">
+							<div><label><input type="checkbox" name="wyp[]" value="1"> klimatyzacja </label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="2"> systemy: ESP i ABS </label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="3"> tapicerka skórzana </label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="4"> tempomat </label></div>
+						</div>
+						
+						<div class="col">
+							<div><label><input type="checkbox" name="wyp[]" value="5"> tylny spojler dachowy </label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="6"> radio z bluetooth </label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="7"> reflektory przeciwmgłowe </label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="8"> przyciemniane tylne szyby </label></div>
+						</div>
+						
+						<div class="col">
+							<div><label><input type="checkbox" name="wyp[]" value="9"> czujniki parkowania </label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="10"> podgrzewane fotele </label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="11"> składane lusterka </label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="12"> światła LED do jazdy dziennej </label></div>
+						</div> 
+
+						<div class="col">
+							<div><label><input type="checkbox" name="wyp[]" value="9"> złote felgi </label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="10"> skórzane fotele </label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="11"> giga tłumik </label></div>
+							<div><label><input type="checkbox" name="wyp[]" value="12"> nitro </label></div>
+						</div>
+					</fieldset>
+				
+				</div>
+				
+				<div class="row">
+				
+					<label for="choinka"> Jakie choinki zapachowe? </label>
+					
+					<div style="margin-top:10px;">
+						<select id="choinka" name="choinka[]" multiple size="4">
+						
+							<option value="k">kokosowa</option>
+							<option value="c" selected>cytrynowa</option>
+							<option value="t">truskawkowa</option>
+							<option value="b">brzoskwiniowa</option>
+						
+						</select>
+					</div>
+				
+				</div>
+
+				<div class="row">
+				
+					<label for="kolor">Jaki kolor samochodu? </label>
+					
+					<div style="margin-top:20px;">
+						<select id="kolor" name="kolor[]" multiple size="5">
+						
+							<option value="e">czerwony</option>
+							<option value="o" selected>czarny</option>
+							<option value="f">fioletowy</option>
+							<option value="p">biały</option>
+							<option value="n">niebieski</option>
+						
+						</select>
+					</div>
+				
+				</div>
+				
+				<div class="row">
+				
+					<label> Imię <input type="text" name="imie" required placeholder="Jak masz na imię?"></label>
+					<label> Nazwisko <input type="password" name="nazwisko" required></label>
+					<label> Hasło <input type="password" name="haslo" required></label>
+					<label> E-mail <input type="search" name="e-mail"required></label>
+					<label> Szukaj <input type="search" name="fraza"></label>
+				
+				</div>
+				
+				<div class="row">
+					<label> Ile kluczyków <input type="number" name="kluczyk" required step="1"></label>
+				</div>
+				
+				<div class="row">
+					<input type="submit" value="Zamawiam!">
+					<input type="button" value="Anuluj">
+					<button type="button">Może później</button>
+				</div>
+				
+			</form>		
+			
+		</article>
+		
+	</main>
+
+</body>
+</html>
